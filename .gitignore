@@ -5,9 +5,9 @@ npm-debug.log
 yarn-error.log
 
 # gitignore
-# .gitignore
+.gitignore
 
 # secrets
-# database/secretsDB.json
-# instagram/credentials.json
+database/secretsDB.json
+instagram/credentials.json
 

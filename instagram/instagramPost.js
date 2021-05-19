@@ -4,3 +4,9 @@ const user = credentials.user;
 const pass = credentials.password;
 const client = new Instagram({user, pass});
 
+function instagramPost(){
+
+}
+
+
+module.exports={instagramPost}
