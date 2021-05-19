@@ -1,0 +1,26 @@
+{
+  "name": "newsapp",
+  "version": "1.0.0",
+  "description": "Application to scrape news from internet and post them on Instagram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KianSalehi/NewsApp.git"
+  },
+  "author": "Kian Salehi, Bira Manoharan, Gautham Radheepan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KianSalehi/NewsApp/issues"
+  },
+  "homepage": "https://github.com/KianSalehi/NewsApp#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.9",
+    "instagram-web-api": "^2.2.2",
+    "mongodb": "^3.6.7",
+    "puppeteer": "^9.1.1"
+  }
+}
