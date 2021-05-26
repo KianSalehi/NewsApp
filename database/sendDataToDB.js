@@ -1,11 +1,11 @@
 const MongoClient = require('mongodb').MongoClient;
 const secrets = require('./secretsDB.json');
 const uri = `mongodb+srv://${secrets.DBUsername}:${secrets.DBPassword}@cluster0.7aovf.mongodb.net/GamblerBot?retryWrites=true&w=majority`
-const MClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 //data to bbc
 async function sendBBC(newsList){
+    const MClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     let client = await MClient.connect();
     let today = new Date();
     newsList=newsList.splice(0,5);
@@ -18,6 +18,7 @@ async function sendBBC(newsList){
 }
 //data to nbc
 async function sendNBC(newsList){
+    const MClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     let client = await MClient.connect();
     let today = new Date();
     newsList=newsList.splice(0,5);
@@ -29,7 +30,8 @@ async function sendNBC(newsList){
     await client.close();
 }
 //data to cnn
-async function sendCNN(newsList){
+async function sendCTV(newsList){
+    const MClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     let client = await MClient.connect();
     let today = new Date();
     newsList=newsList.splice(0,5);
@@ -37,8 +39,8 @@ async function sendCNN(newsList){
         news: newsList,
         time: today
     }
-    await client.db("News").collection("cnn").insertOne(cnnNewsDB);
+    await client.db("News").collection("ctv").insertOne(cnnNewsDB);
     await client.close();
 }
 
-module.exports={sendBBC, sendCNN, sendNBC}
+module.exports={sendBBC, sendCTV, sendNBC}
